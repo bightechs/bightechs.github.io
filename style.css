@@ -570,3 +570,45 @@ header {
         width: 100%;
     }
 }
+
+.gallery {
+    padding: 60px 8%;
+    text-align: center;
+    background: #f4f7fb;
+}
+
+.gallery h2 {
+    font-size: 32px;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.gallery p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
