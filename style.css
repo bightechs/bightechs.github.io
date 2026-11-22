@@ -1,0 +1,572 @@
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background: #f5f7fa;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+header {
+    background: #061b35;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00c2ff;
+}
+
+/* Home Section */
+
+.hero {
+    min-height: 600px;
+
+    background:
+        linear-gradient(
+            rgba(3, 20, 40, 0.65),
+            rgba(3, 20, 40, 0.65)
+        ),
+        url("ship.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px 10%;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #00a6d6;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #007da8;
+}
+
+/* Common Sections */
+section:not(.hero) {
+    padding: 75px 8%;
+    text-align: center;
+}
+
+section h2 {
+    color: #061b35;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+/* About Section */
+.about {
+    background: white;
+}
+
+.about p,
+.projects p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 17px;
+}
+
+/* Services Section */
+.services {
+    background: #edf3f8;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.service-box {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-7px);
+}
+
+.service-box h3 {
+    color: #075985;
+    margin-bottom: 15px;
+}
+
+/* Projects Section */
+.projects {
+    background: white;
+}
+
+/* Contact Section */
+.contact {
+    background: #e9f1f7;
+}
+
+.contact p {
+    margin: 12px 0;
+}
+
+/* Footer */
+footer {
+    background: #061b35;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    section:not(.hero) {
+        padding: 50px 6%;
+    }
+}
+
+.section-intro {
+    color: #555;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.service-box {
+    border-top: 4px solid #00a6d6;
+    text-align: left;
+}
+
+.service-box h3 {
+    font-size: 21px;
+}
+
+/* About Us Section */
+
+.about {
+    background: #ffffff;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 45px;
+    align-items: center;
+    text-align: left;
+}
+
+.about-text h2 {
+    text-align: left;
+    color: #075985;
+}
+
+.about-text h3 {
+    font-size: 25px;
+    color: #061b35;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 18px;
+    line-height: 1.8;
+}
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.highlight-box {
+    background: #edf5fa;
+    border-left: 4px solid #00a6d6;
+    padding: 25px 18px;
+    border-radius: 7px;
+}
+
+.highlight-box h3 {
+    color: #075985;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.highlight-box p {
+    color: #555;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* Projects Section */
+
+.projects {
+    background: #edf3f8;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.project-card {
+    background: white;
+    padding: 30px;
+    text-align: left;
+    border-radius: 10px;
+    border-bottom: 4px solid #00a6d6;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+}
+
+.project-icon {
+    font-size: 30px;
+    font-weight: bold;
+    color: #00a6d6;
+    margin-bottom: 18px;
+}
+
+.project-card h3 {
+    color: #061b35;
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+.project-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Contact Us Section */
+
+.contact {
+    background: #edf3f8;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    margin-top: 35px;
+    text-align: left;
+}
+
+.contact-info,
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+}
+
+.contact-info h3,
+.contact-form h3 {
+    color: #061b35;
+    margin-bottom: 25px;
+    font-size: 23px;
+}
+
+.contact-item {
+    margin-bottom: 20px;
+}
+
+.contact-item h4 {
+    color: #075985;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: #555;
+    line-height: 1.8;
+}
+
+.contact-item a {
+    color: #075985;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #00a6d6;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccd5df;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #00a6d6;
+}
+
+.contact-form button {
+    background: #075985;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #00a6d6;
+}
+
+@media (max-width: 768px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* Careers Section */
+
+.careers {
+    background: #ffffff;
+}
+
+.career-intro {
+    max-width: 900px;
+    margin: 30px auto;
+    line-height: 1.8;
+    color: #555;
+}
+
+.career-intro h3 {
+    color: #075985;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.career-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 35px;
+    text-align: left;
+}
+
+.career-card {
+    background: #edf5fa;
+    padding: 30px;
+    border-radius: 10px;
+    border-top: 4px solid #00a6d6;
+}
+
+.career-card h3 {
+    color: #061b35;
+    margin-bottom: 20px;
+}
+
+.career-card ul {
+    padding-left: 22px;
+}
+
+.career-card li {
+    margin-bottom: 12px;
+    color: #555;
+}
+
+.career-apply {
+    margin-top: 40px;
+    padding: 40px 20px;
+    background: #061b35;
+    color: white;
+    border-radius: 10px;
+}
+
+.career-apply h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.career-apply p {
+    margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+    .career-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Company Logo */
+
+.logo img {
+    width: 260px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Header alignment */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+/* Mobile Responsive Improvements */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .logo img {
+        width: 200px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .service-container,
+    .project-container,
+    .career-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}
